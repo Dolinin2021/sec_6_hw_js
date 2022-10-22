@@ -6,7 +6,7 @@ let slideIndex = 1;
 
 function showSlides(num) {
   let index;
-  let sliderItem = document.getElementsByClassName("slider__item");
+  let sliderItem = document.querySelectorAll(".slider__item");
 
   if (num > sliderItem.length) {
     slideIndex = 1;
