@@ -1,5 +1,5 @@
-const sliderArrowPrev = document.getElementsByClassName('slider__arrow_prev');
-const sliderArrowNext = document.getElementsByClassName('slider__arrow_next');
+const sliderArrowPrev = document.querySelector('.slider__arrow_prev');
+const sliderArrowNext = document.querySelector('.slider__arrow_next');
 
 let slideIndex = 1;
 
@@ -27,14 +27,10 @@ function plusSlides(num) {
 }
 
 
-for (let index = 0; index <= sliderArrowPrev.length - 1; index++) {
-        sliderArrowPrev[index].addEventListener('click', () => {
-        plusSlides(-1);
-    })
-}
-
-for (let index = 0; index <= sliderArrowNext.length - 1; index++) {
-    sliderArrowNext[index].addEventListener('click', () => {
-    plusSlides(1);
+sliderArrowPrev.addEventListener('click', () => {
+  plusSlides(-1);
 })
-}
+
+sliderArrowNext.addEventListener('click', () => {
+  plusSlides(1);
+})

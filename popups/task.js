@@ -15,5 +15,6 @@ arrbtnClose.forEach((element) => {
 })
 
 btnDanger[0].onclick = () => {
+    modalMain.classList.remove('modal_active');
     modalSuccess.classList.add('modal_active');
 }
